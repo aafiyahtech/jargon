@@ -31,12 +31,12 @@ export function AnimatedText({
 
   return (
     <div className={cn('overflow-hidden', className)}>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center word-spacing-wide">
         {words.map((word, i) => (
           <span
             key={i}
             className={cn(
-              'inline-block transform transition-transform duration-700 ease-out opacity-0',
+              'inline-block transform transition-transform duration-700 ease-out opacity-0 mx-1',
               isVisible && 'opacity-100 translate-y-0',
               wordClassName
             )}
@@ -45,7 +45,7 @@ export function AnimatedText({
               transform: isVisible ? 'translateY(0)' : 'translateY(2rem)',
             }}
           >
-            {word}{' '}
+            {word}
           </span>
         ))}
       </div>
