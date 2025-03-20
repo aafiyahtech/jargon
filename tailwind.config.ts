@@ -65,7 +65,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Bricolage Grotesque', 'Inter', 'sans-serif'],
 				mono: ['Roboto Mono', 'monospace'],
 			},
 			borderRadius: {
