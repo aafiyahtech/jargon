@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Phone, Send, X, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { showSarcasticToast } from '@/utils/sarcasmUtils';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -24,13 +25,11 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Show sarcastic toast
+    showSarcasticToast('contact');
+    
     // Pretend to submit the form
     setTimeout(() => {
-      toast({
-        title: "Thanks for reaching out!",
-        description: "Your message will be carefully ignored by our team.",
-        variant: "default",
-      });
       setIsSubmitted(true);
       
       setFormData({
@@ -48,13 +47,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-secondary">
+    <section id="contact" className="py-24 px-6 bg-secondary/50">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block mb-2 px-3 py-1 bg-primary/10 rounded-full text-xs font-semibold uppercase tracking-wider text-primary">
             Contact Us
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-bricolage">
             Get in Touch (We Might Respond)
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -64,10 +63,10 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-5 gap-10">
           <div className="md:col-span-2 space-y-8">
-            <div className="glass-card rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-6">Where to Find Us</h3>
+            <div className="glass-card rounded-xl p-7">
+              <h3 className="text-xl font-bold mb-6 font-bricolage">Where to Find Us</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-7">
                 <div className="flex items-start">
                   <div className="bg-primary/10 p-3 rounded-full mr-4">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -110,8 +109,8 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="bg-accent/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold mb-3">Working Hours</h3>
+            <div className="bg-accent/10 rounded-xl p-7">
+              <h3 className="text-lg font-bold mb-3 font-bricolage">Working Hours</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 We're very flexible about when we pretend to work.
               </p>
@@ -134,10 +133,10 @@ const ContactSection = () => {
           
           <div className="md:col-span-3">
             <form onSubmit={handleSubmit} className="glass-panel rounded-xl p-8">
-              <h3 className="text-xl font-bold mb-6">Send Us a Message</h3>
+              <h3 className="text-xl font-bold mb-6 font-bricolage">Send Us a Message</h3>
               
-              <div className="space-y-4 mb-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-5 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
                     <Input

@@ -17,7 +17,7 @@ const TeamSection = () => {
       name: "Jamie Chen",
       title: "VP of Artificial Hype",
       bio: "Has read half a book on machine learning. Loves to use 'algorithm' in sentences where it doesn't belong.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&auto=format&fit=crop&q=80",
       initial: "JC"
     },
     {
@@ -31,7 +31,7 @@ const TeamSection = () => {
       name: "Morgan Smith",
       title: "Director of Quantum Confusion",
       bio: "Adds 'quantum' to every product we offer. Isn't entirely sure what quantum means, but neither are our clients.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&auto=format&fit=crop&q=80",
       initial: "MS"
     }
   ];
@@ -39,10 +39,10 @@ const TeamSection = () => {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
 
   return (
-    <section id="team" className="py-24 px-6 bg-gradient-to-b from-background to-secondary/50">
+    <section id="team" className="py-28 px-6 bg-gradient-to-b from-background to-secondary/30">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-1.5 bg-accent/15 rounded-full text-sm font-semibold uppercase tracking-wider text-accent">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-accent/15 rounded-full text-sm font-medium uppercase tracking-wider text-accent">
             Our Team
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 relative inline-block">
@@ -58,12 +58,12 @@ const TeamSection = () => {
           {team.map((member, index) => (
             <div 
               key={index}
-              className="glass-card rounded-xl p-8 text-center hover-lift"
+              className="glass-card rounded-xl p-8 text-center hover-lift group"
               onMouseEnter={() => setHoveredMember(index)}
               onMouseLeave={() => setHoveredMember(null)}
             >
               <div className="relative mb-6 mx-auto">
-                <Avatar className="w-28 h-28 mx-auto border-4 border-background shadow-xl">
+                <Avatar className="w-28 h-28 mx-auto border-4 border-background shadow-xl transition-transform duration-300 group-hover:scale-105">
                   <AvatarImage src={member.image} alt={member.name} />
                   <AvatarFallback className="text-xl bg-primary text-primary-foreground">
                     {member.initial}
@@ -84,17 +84,17 @@ const TeamSection = () => {
                   </div>
                 )}
               </div>
-              <h3 className="font-bold text-xl mb-2">{member.name}</h3>
+              <h3 className="font-bold text-xl mb-2 font-bricolage">{member.name}</h3>
               <p className="text-accent text-sm mb-4">{member.title}</p>
               <p className="text-muted-foreground text-sm mb-5">{member.bio}</p>
               <div className="flex justify-center space-x-4 text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#" className="hover:text-accent transition-colors">
                   <Twitter className="h-4 w-4" />
                 </a>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#" className="hover:text-accent transition-colors">
                   <Linkedin className="h-4 w-4" />
                 </a>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#" className="hover:text-accent transition-colors">
                   <Github className="h-4 w-4" />
                 </a>
               </div>
@@ -104,7 +104,7 @@ const TeamSection = () => {
 
         <div className="glass-panel rounded-xl overflow-hidden shadow-lg">
           <div className="px-10 py-12 text-center">
-            <h3 className="text-2xl font-bold mb-5">Want to Join Our Team?</h3>
+            <h3 className="text-2xl font-bold mb-5 font-bricolage">Want to Join Our Team?</h3>
             <p className="mb-8 text-muted-foreground text-lg">
               We're always looking for people who can create complex solutions for simple problems. Must be fluent in buzzwords and comfortable with ambiguity (we don't know what we're doing either).
             </p>

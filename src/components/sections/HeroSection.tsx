@@ -4,6 +4,8 @@ import FancyButton from '@/components/ui/FancyButton';
 import AnimatedText from '@/components/ui/AnimatedText';
 import JargonTooltip from '@/components/ui/JargonTooltip';
 import { Server, Zap, ArrowDown } from 'lucide-react';
+import { showSarcasticToast } from '@/utils/sarcasmUtils';
+import { Toaster } from 'sonner';
 
 const buzzwords = [
   "Synergizing",
@@ -31,6 +33,9 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-24 px-6">
+      {/* Add Sonner Toaster */}
+      <Toaster position="top-center" />
+    
       {/* Abstract background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-radial from-primary/20 to-transparent rounded-full animate-pulse-slow" />
@@ -66,11 +71,11 @@ const HeroSection = () => {
         />
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-24">
-          <FancyButton size="lg">
+          <FancyButton size="lg" onClick={() => showSarcasticToast('getStarted')}>
             Get Started
             <Zap className="ml-2 h-4 w-4" />
           </FancyButton>
-          <FancyButton variant="outline" size="lg">
+          <FancyButton variant="outline" size="lg" onClick={() => showSarcasticToast('demo')}>
             Book a Demo That Never Happens
           </FancyButton>
         </div>

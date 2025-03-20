@@ -8,6 +8,7 @@ import ServicesSection from '@/components/sections/ServicesSection';
 import TeamSection from '@/components/sections/TeamSection';
 import FundingSection from '@/components/sections/FundingSection';
 import ContactSection from '@/components/sections/ContactSection';
+import { Toaster } from '@/components/ui/toaster';
 
 const Index = () => {
   // Smooth scroll functionality
@@ -35,6 +36,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Toaster />
       <NavBar />
       
       <main>
