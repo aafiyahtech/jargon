@@ -63,7 +63,7 @@ const JargonTooltip: React.FC<JargonProps> = ({ term, children }) => {
           <span>{children}</span>
         </TooltipTrigger>
         <TooltipContent side="top" className="max-w-xs p-4 text-sm glass-panel">
-          <p><strong>{term}:</strong> {definition}</p>
+          <p className="tracking-normal leading-relaxed"><strong>{term}:</strong> {definition}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

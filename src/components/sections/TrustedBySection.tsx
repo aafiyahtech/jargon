@@ -3,72 +3,60 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const TrustedBySection = () => {
-  const companies = [
-    { 
-      name: 'Google', 
-      logo: 'https://www.vectorlogo.zone/logos/google/google-ar21.svg'
-    },
-    { 
-      name: 'Microsoft', 
-      logo: 'https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg'
-    },
-    { 
-      name: 'Apple', 
-      logo: 'https://www.vectorlogo.zone/logos/apple/apple-ar21.svg'
-    },
-    { 
-      name: 'Amazon', 
-      logo: 'https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg'
-    },
+  const logos = [
+    { logo: 'https://www.vectorlogo.zone/logos/google/google-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/facebook/facebook-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/netflix/netflix-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/tesla/tesla-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/nvidia/nvidia-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/adobe/adobe-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/salesforce/salesforce-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/ibm/ibm-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/intel/intel-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/cisco/cisco-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/spotify/spotify-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/twitter/twitter-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/pinterest/pinterest-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/slack/slack-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/uber/uber-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/airbnb/airbnb-ar21.svg' },
   ];
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  };
 
   return (
     <section className="py-16 bg-background">
-      <div className="container max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Trusted By</h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Companies that don't exist but would definitely use our products if they did.
-        </p>
+      <div className="container max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Trusted By</h2>
         
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {companies.map((company, index) => (
-            <motion.div 
-              key={index}
-              className="flex flex-col items-center p-6 bg-white/30 backdrop-blur-sm border border-border rounded-xl hover:shadow-md transition-all"
-              variants={itemVariants}
-            >
-              <div className="w-full h-16 flex items-center justify-center mb-4">
+        <div className="relative w-full overflow-hidden">
+          {/* Fade effect on left side */}
+          <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
+          
+          <div className="flex flex-wrap justify-center gap-6 py-4">
+            {logos.map((item, index) => (
+              <motion.div 
+                key={index}
+                className="w-32 h-16 flex items-center justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 <img 
-                  src={company.logo} 
-                  alt={`${company.name} logo`} 
-                  className="max-h-12 max-w-full object-contain" 
+                  src={item.logo} 
+                  alt="Company logo" 
+                  className="max-h-12 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity"
                 />
-              </div>
-              <h3 className="font-bold">{company.name}</h3>
-              <p className="text-sm text-muted-foreground mt-2">Since {2020 - index}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Fade effect on right side */}
+          <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
+        </div>
       </div>
     </section>
   );

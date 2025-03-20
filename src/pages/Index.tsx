@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import NavBar from '@/components/common/NavBar';
 import Footer from '@/components/common/Footer';
@@ -43,10 +44,10 @@ const Index = () => {
       
       <main>
         <HeroSection />
+        <TrustedBySection />
         <ServicesSection />
         <AsFeaturedinSection />
         <AboutSection />
-        <TrustedBySection />
         <TeamSection />
         <InteractiveSection />
         <FundingSection />
