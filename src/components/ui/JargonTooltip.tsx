@@ -9,7 +9,7 @@ interface JargonProps {
 
 const jargonDefinitions: Record<string, string> = {
   'blockchain': 'Something about immutable ledgers that we don't fully understand either.',
-  'AI': 'If-else statements with a fancy name and a higher price tag.',
+  'ai': 'If-else statements with a fancy name and a higher price tag.',
   'machine learning': 'When computers learn from data, like how we learn nothing from our mistakes.',
   'synergy': 'Corporate-speak for "it might work together, we're not sure."',
   'disruption': 'Making things worse, but with an app.',
@@ -29,7 +29,7 @@ const jargonDefinitions: Record<string, string> = {
   'neural network': 'Math that gives unpredictable results, just like our business model.',
   'thought leadership': 'Opinions we wrote down and called content.',
   'stealth mode': 'We don't have a product yet.',
-  'MVP': 'The bare minimum we could build and still ask for funding.',
+  'mvp': 'The bare minimum we could build and still ask for funding.',
   'next-generation': 'The same as the current generation, but with a new logo.',
   'robust': 'It crashes less than half the time.',
   'enterprise-grade': 'Unnecessarily complicated and expensive.',
@@ -44,8 +44,12 @@ const jargonDefinitions: Record<string, string> = {
   'synergize': 'When two useless products combine to form one slightly less useless product.',
   'blockchain-enabled': 'Regular software but with a blockchain somewhere in the background doing nothing useful.',
   'digital-first': 'We have a website.',
-  'IoT': 'Everyday objects connected to the internet for no good reason.',
+  'iot': 'Everyday objects connected to the internet for no good reason.',
   'revolutionary algorithm': 'We run basic calculations but do them on expensive servers.',
+  'wework': 'Overpriced office space with free beer to distract you from the rent.',
+  'mission-critical': 'It would be nice if it worked, but we'll survive when it doesn't.',
+  'paradigms': 'Things we pretend to understand during meetings.',
+  'proprietary': 'We added a login screen to open-source code.'
 };
 
 const JargonTooltip: React.FC<JargonProps> = ({ term, children }) => {
