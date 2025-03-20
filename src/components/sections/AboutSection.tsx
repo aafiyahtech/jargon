@@ -12,7 +12,11 @@ const AboutSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
+            // Instead of adding a class, directly make the element visible
+            if (statsRef.current) {
+              statsRef.current.style.opacity = '1';
+              statsRef.current.style.transform = 'translateY(0)';
+            }
           }
         });
       },
@@ -113,7 +117,16 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-0">
+        {/* Modified stats section with direct style instead of animation class */}
+        <div 
+          ref={statsRef} 
+          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          style={{ 
+            opacity: 0, 
+            transform: 'translateY(20px)',
+            transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
+          }}
+        >
           <div className="bg-card p-8 rounded-xl shadow-md text-center hover-lift border border-border/40">
             <div className="text-4xl font-bold text-primary mb-3">42M+</div>
             <div className="text-sm text-muted-foreground">Lines of Unused Code</div>
