@@ -1,14 +1,25 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building, Building2, Landmark, Trees } from 'lucide-react';
 
 const TrustedBySection = () => {
   const companies = [
-    { name: 'Imaginary Corp', icon: <Building className="h-10 w-10" /> },
-    { name: 'Nonexistent LLC', icon: <Building2 className="h-10 w-10" /> },
-    { name: 'Fictitious Bank', icon: <Landmark className="h-10 w-10" /> },
-    { name: 'Made Up Ventures', icon: <Trees className="h-10 w-10" /> },
+    { 
+      name: 'Google', 
+      logo: 'https://www.vectorlogo.zone/logos/google/google-ar21.svg'
+    },
+    { 
+      name: 'Microsoft', 
+      logo: 'https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg'
+    },
+    { 
+      name: 'Apple', 
+      logo: 'https://www.vectorlogo.zone/logos/apple/apple-ar21.svg'
+    },
+    { 
+      name: 'Amazon', 
+      logo: 'https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg'
+    },
   ];
 
   const containerVariants = {
@@ -46,8 +57,12 @@ const TrustedBySection = () => {
               className="flex flex-col items-center p-6 bg-white/30 backdrop-blur-sm border border-border rounded-xl hover:shadow-md transition-all"
               variants={itemVariants}
             >
-              <div className="bg-accent/10 p-4 rounded-full mb-4">
-                {company.icon}
+              <div className="w-full h-16 flex items-center justify-center mb-4">
+                <img 
+                  src={company.logo} 
+                  alt={`${company.name} logo`} 
+                  className="max-h-12 max-w-full object-contain" 
+                />
               </div>
               <h3 className="font-bold">{company.name}</h3>
               <p className="text-sm text-muted-foreground mt-2">Since {2020 - index}</p>

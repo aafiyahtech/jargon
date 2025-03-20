@@ -47,7 +47,7 @@ const AboutSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
-          <div className="glass-card p-8 rounded-2xl shadow-lg transform hover:scale-[1.01] transition-all">
+          <div className="bg-card p-8 rounded-2xl shadow-lg border border-border/40 transform hover:scale-[1.01] hover:shadow-xl transition-all">
             <h3 className="text-2xl font-bold mb-5 flex items-center">
               <Sparkles className="h-6 w-6 text-accent mr-3" />
               Our <JargonTooltip term="Paradigm Shift">Paradigm Shift</JargonTooltip> Story
@@ -64,7 +64,7 @@ const AboutSection = () => {
               </p>
             </div>
           </div>
-          <div className="relative glass-panel p-8 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative bg-card p-8 rounded-2xl overflow-hidden shadow-lg border border-border/40">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 z-0 opacity-50" />
             <div className="relative z-10">
               <h4 className="text-xl font-bold mb-6 flex items-center">
@@ -114,19 +114,19 @@ const AboutSection = () => {
         </div>
 
         <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-0">
-          <div className="glass-card p-8 rounded-xl shadow-md text-center hover-lift">
+          <div className="bg-card p-8 rounded-xl shadow-md text-center hover-lift border border-border/40">
             <div className="text-4xl font-bold text-primary mb-3">42M+</div>
             <div className="text-sm text-muted-foreground">Lines of Unused Code</div>
           </div>
-          <div className="glass-card p-8 rounded-xl shadow-md text-center hover-lift">
+          <div className="bg-card p-8 rounded-xl shadow-md text-center hover-lift border border-border/40">
             <div className="text-4xl font-bold text-primary mb-3">0</div>
             <div className="text-sm text-muted-foreground">Clear Use Cases</div>
           </div>
-          <div className="glass-card p-8 rounded-xl shadow-md text-center hover-lift">
+          <div className="bg-card p-8 rounded-xl shadow-md text-center hover-lift border border-border/40">
             <div className="text-4xl font-bold text-primary mb-3">$100M</div>
             <div className="text-sm text-muted-foreground">VC Funding to Burn</div>
           </div>
-          <div className="glass-card p-8 rounded-xl shadow-md text-center hover-lift">
+          <div className="bg-card p-8 rounded-xl shadow-md text-center hover-lift border border-border/40">
             <div className="text-4xl font-bold text-primary mb-3">∞</div>
             <div className="text-sm text-muted-foreground">Pivots Planned</div>
           </div>

@@ -1,23 +1,22 @@
 
 import React from 'react';
-import { Award, CheckCircle, Star } from 'lucide-react';
 
 const AsFeaturedinSection = () => {
   const publications = [
     {
-      name: "Tech Nonsense",
+      name: "TechCrunch",
       quote: "Revolutionary approach to doing absolutely nothing.",
-      icon: <Star className="h-6 w-6 text-yellow-500" />
+      logo: "https://www.vectorlogo.zone/logos/techcrunch/techcrunch-ar21.svg"
     },
     {
-      name: "Startup Fairytales",
+      name: "Wired",
       quote: "The most innovative company with zero product-market fit.",
-      icon: <Award className="h-6 w-6 text-blue-400" />
+      logo: "https://cdn.worldvectorlogo.com/logos/wired-1.svg"
     },
     {
-      name: "VC Daydreams",
+      name: "Forbes",
       quote: "We invested because their deck had great animations.",
-      icon: <CheckCircle className="h-6 w-6 text-green-500" />
+      logo: "https://www.vectorlogo.zone/logos/forbes/forbes-ar21.svg"
     }
   ];
 
@@ -32,12 +31,18 @@ const AsFeaturedinSection = () => {
           {publications.map((pub, index) => (
             <div 
               key={index}
-              className="glass-card rounded-xl p-8 transition-all duration-300 hover:shadow-xl"
+              className="bg-card rounded-xl p-8 transition-all duration-300 hover:shadow-xl border border-border/40"
             >
               <div className="flex items-center mb-4">
-                {pub.icon}
-                <h3 className="text-xl font-bold ml-3">{pub.name}</h3>
+                <div className="h-10 w-32 relative flex items-center justify-start">
+                  <img 
+                    src={pub.logo} 
+                    alt={`${pub.name} logo`} 
+                    className="max-h-8 max-w-full object-contain" 
+                  />
+                </div>
               </div>
+              <h3 className="text-xl font-bold mb-3">{pub.name}</h3>
               <blockquote className="text-muted-foreground italic">"{pub.quote}"</blockquote>
             </div>
           ))}

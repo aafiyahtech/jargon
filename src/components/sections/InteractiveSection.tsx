@@ -88,8 +88,8 @@ const InteractiveSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="lg:col-span-2 space-y-8">
-            <Card>
+          <div className="lg:col-span-2">
+            <Card className="h-full flex flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Sliders className="mr-2 h-5 w-5" />
@@ -99,7 +99,7 @@ const InteractiveSection = () => {
                   Adjust these meaningless parameters to configure your solution
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
+              <CardContent className="space-y-8 flex-grow">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <h3 className="font-medium">Buzzword Density</h3>
@@ -155,7 +155,7 @@ const InteractiveSection = () => {
           </div>
 
           <div>
-            <Card>
+            <Card className="h-full flex flex-col">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <DollarSign className="mr-2 h-5 w-5" />
@@ -165,7 +165,7 @@ const InteractiveSection = () => {
                   Your solution's effectiveness score
                 </CardDescription>
               </CardHeader>
-              <CardContent className="pt-6">
+              <CardContent className="pt-6 flex-grow flex flex-col justify-between">
                 <div className="text-center py-6">
                   <motion.div 
                     className="text-6xl font-bold text-accent mb-4"

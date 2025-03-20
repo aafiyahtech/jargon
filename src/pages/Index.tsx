@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import NavBar from '@/components/common/NavBar';
 import Footer from '@/components/common/Footer';
@@ -11,7 +10,6 @@ import ContactSection from '@/components/sections/ContactSection';
 import AsFeaturedinSection from '@/components/sections/AsFeaturedinSection';
 import TrustedBySection from '@/components/sections/TrustedBySection';
 import InteractiveSection from '@/components/sections/InteractiveSection';
-import DashboardSection from '@/components/sections/DashboardSection';
 import { Toaster } from '@/components/ui/toaster';
 
 const Index = () => {
@@ -51,7 +49,6 @@ const Index = () => {
         <TrustedBySection />
         <TeamSection />
         <InteractiveSection />
-        <DashboardSection />
         <FundingSection />
         <ContactSection />
       </main>
