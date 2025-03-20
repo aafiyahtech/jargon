@@ -8,6 +8,10 @@ import ServicesSection from '@/components/sections/ServicesSection';
 import TeamSection from '@/components/sections/TeamSection';
 import FundingSection from '@/components/sections/FundingSection';
 import ContactSection from '@/components/sections/ContactSection';
+import AsFeaturedinSection from '@/components/sections/AsFeaturedinSection';
+import TrustedBySection from '@/components/sections/TrustedBySection';
+import InteractiveSection from '@/components/sections/InteractiveSection';
+import DashboardSection from '@/components/sections/DashboardSection';
 import { Toaster } from '@/components/ui/toaster';
 
 const Index = () => {
@@ -42,8 +46,12 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
+        <AsFeaturedinSection />
         <AboutSection />
+        <TrustedBySection />
         <TeamSection />
+        <InteractiveSection />
+        <DashboardSection />
         <FundingSection />
         <ContactSection />
       </main>
