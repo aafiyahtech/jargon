@@ -65,8 +65,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Bricolage Grotesque', 'Inter', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
 				mono: ['Roboto Mono', 'monospace'],
+				bricolage: ['Bricolage Grotesque', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

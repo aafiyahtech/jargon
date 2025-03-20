@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -50,6 +50,23 @@
     letter-spacing: -0.01em;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bricolage tracking-tight font-bold;
+    letter-spacing: -0.03em;
+  }
+  
+  h1 {
+    @apply leading-[1.05];
+  }
+  
+  h2 {
+    @apply leading-[1.1];
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+
   .glass-panel {
     @apply backdrop-blur-md bg-white/80 dark:bg-black/80 border border-white/30 dark:border-black/20 shadow-xl;
   }
@@ -83,11 +100,13 @@
     @apply animate-reveal-text whitespace-nowrap;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
-  }
-  
   section {
-    @apply py-24;
+    @apply py-24 md:py-32;
+  }
+}
+
+@layer utilities {
+  .font-bricolage {
+    font-family: 'Bricolage Grotesque', sans-serif;
   }
 }

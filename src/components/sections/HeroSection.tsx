@@ -39,7 +39,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 max-w-6xl mx-auto text-center">
-        <div className="mb-8 inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full">
+        <div className="mb-10 inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full">
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
@@ -47,25 +47,25 @@ const HeroSection = () => {
           <span className="text-sm font-medium">We just raised $100M for no apparent reason</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 leading-tight">
-          <span className="block mb-3">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight tracking-tighter">
+          <span className="block mb-4">
             <span className="sliding-text-container">
               <span className="text-gradient inline-block transition-all duration-300 transform">
                 {buzzword}
               </span>
             </span>
           </span>
-          <span className="block mb-2">Enterprise <JargonTooltip term="Synergy">Synergy</JargonTooltip> Through</span>
+          <span className="block mb-3">Enterprise <JargonTooltip term="Synergy">Synergy</JargonTooltip> Through</span>
           <span className="block"><JargonTooltip term="Quantum">Quantum</JargonTooltip> <JargonTooltip term="Blockchain">Blockchain</JargonTooltip></span>
         </h1>
 
         <AnimatedText 
-          text="We leverage cutting-edge AI algorithms to disrupt traditional paradigms with our proprietary neural network ecosystem."
-          className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed"
+          text="We transform business landscapes using cutting-edge AI orchestration, unlocking value through our hyperscale neural fabric while delivering zero measurable outcomes."
+          className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground mb-14 leading-relaxed font-light"
           delay={300}
         />
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-24">
           <FancyButton size="lg">
             Get Started
             <Zap className="ml-2 h-4 w-4" />
