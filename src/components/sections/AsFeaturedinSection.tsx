@@ -9,9 +9,9 @@ const AsFeaturedinSection = () => {
       logo: "https://www.vectorlogo.zone/logos/techcrunch/techcrunch-ar21.svg"
     },
     {
-      name: "Wired",
+      name: "The Verge",
       quote: "The most innovative company with zero product-market fit.",
-      logo: "https://cdn.worldvectorlogo.com/logos/wired-1.svg"
+      logo: "https://www.vectorlogo.zone/logos/theverge/theverge-ar21.svg"
     },
     {
       name: "Forbes",

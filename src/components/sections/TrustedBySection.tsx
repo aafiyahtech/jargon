@@ -17,7 +17,7 @@ const TrustedBySection = () => {
     { logo: 'https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' },
     { logo: 'https://www.vectorlogo.zone/logos/ibm/ibm-ar21.svg' },
     { logo: 'https://www.vectorlogo.zone/logos/intel/intel-ar21.svg' },
-    { logo: 'https://www.vectorlogo.zone/logos/cisco/cisco-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/hp/hp-ar21.svg' }, // Replaced Cisco with HP
     { logo: 'https://www.vectorlogo.zone/logos/spotify/spotify-ar21.svg' },
     { logo: 'https://www.vectorlogo.zone/logos/twitter/twitter-ar21.svg' },
     { logo: 'https://www.vectorlogo.zone/logos/pinterest/pinterest-ar21.svg' },
