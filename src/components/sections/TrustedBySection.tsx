@@ -22,7 +22,7 @@ const TrustedBySection = () => {
     { logo: 'https://www.vectorlogo.zone/logos/twitter/twitter-ar21.svg' },
     { logo: 'https://www.vectorlogo.zone/logos/pinterest/pinterest-ar21.svg' },
     { logo: 'https://www.vectorlogo.zone/logos/slack/slack-ar21.svg' },
-    { logo: 'https://www.vectorlogo.zone/logos/uber/uber-ar21.svg' },
+    { logo: 'https://www.vectorlogo.zone/logos/samsung/samsung-ar21.svg' }, // Replaced Uber with Samsung
     { logo: 'https://www.vectorlogo.zone/logos/airbnb/airbnb-ar21.svg' },
   ];
 
